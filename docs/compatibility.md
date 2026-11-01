@@ -1,7 +1,7 @@
 # ArcReadyPanel 0.2.18 兼容性核查（2026-10-05）
 
 ## 已实测
-Windows 11 x64、Intel® Core™ Ultra X7 Processor 358H、Intel® Arc™ B390 GPU。通过真实 FPS 帧事件、硬件 AV1/AAC 保存、合盖暂停与恢复、鼠标穿透等测试。其他型号尚未获得实机验证，不能视为保证完整支持。
+Windows 11 x64、Intel® Core™ Ultra X7 Processor 358H、Intel® Arc™ B390 GPU。通过真实 FPS 帧事件、硬件 AV1/AAC 保存、合盖暂停与恢复、鼠标穿透等测试。其他型号尚未获得实机验证，不能保证完整支持。
 
 ## CPU 范围
 程序不再限制 CPU 型号。Windows 11 x64 支持的 Intel® Core™ i3/i5/i7/i9、Intel® Core™ Ultra（Series 1/2/3）、AMD Ryzen™ 可按 Windows 接口提供系统 CPU、进程 CPU、内存和频率数据，但必须搭配 Intel GPU 才能启动本程序。Xeon、Pentium、Celeron 等其他 x64 CPU 同样不设型号门禁，是否运行取决于操作系统和驱动，未验证。
@@ -26,7 +26,5 @@ Intel® Iris® Xe Graphics、Intel® Iris® Xe MAX Graphics、Intel® UHD Graphi
 - 多 Intel GPU 优先选择连接主屏的适配器，其次选择有连接显示器的 Intel GPU。监控和编码使用该设备。
 - 桌面回放要求目标显示器连接到选中的 Intel GPU。混合显卡显示路径可能无法复制；当前录制一个显示器，不拼接多个显示器。旋转显示器暂不支持回放。
 - FPS 使用目标进程的 DXGI 帧事件；并非所有图形 API、游戏呈现路径均可保证读数，也不等同于显示器最终包含生成帧的帧率。
-- 禁用指标不被总览图表重新启用。监视器关闭即停止监控采样；回放开关独立。
-- 尚未进行与 OBS 的整机功耗 A/B 对比，不宣称已证明低于 OBS。
 
 注意：以上不是逐型号保证支持名单。唯一完整实机测试组合仍为358H/B390。CPU不设型号门禁，无法据此生成有限的全部CPU SKU清单。GPU仅按Intel厂商ID和驱动能力筛选；AV1硬件能力不等于软件完整兼容。部分Core Ultra集显名称仅为Intel Graphics，也需按运行时AV1能力判定，不能根据是否带Arc名称判断。Meteor Lake U/H可参考[官方编码说明](https://edc.intel.com/content/www/us/en/design/products/platforms/details/meteor-lake-u-p/core-ultra-processor-datasheet-volume-1-of-2/003/hardware-accelerated-video-encode/)。专业型号参考[Intel Arc Pro A系列](https://www.intel.com/content/www/us/en/products/details/discrete-gpus/arc/workstations/a-series.html)与[Intel Arc Pro B系列](https://www.intel.com/content/www/us/en/products/details/discrete-gpus/arc/workstations/b-series.html)。
